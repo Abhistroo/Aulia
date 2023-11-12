@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "54622903458",
+    "project_id": "aulia-c20cc",
+    "storage_bucket": "aulia-c20cc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:54622903458:android:08490ce867511d87cfcbfb",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBkCNED0Ruq4nELUQn4hdAGWJm9q1ScBo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

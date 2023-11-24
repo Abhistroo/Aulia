@@ -9,31 +9,31 @@
 
     <ImageButton
         android:id="@+id/logout"
-        android:layout_width="69dp"
-        android:layout_height="69dp"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
         android:background="@drawable/baseline_logout_24"
 
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.979"
+        app:layout_constraintHorizontal_bias="0.999"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.024" />
+        app:layout_constraintVertical_bias="0.015" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/quoteContainer"
-        android:layout_width="381dp"
-        android:layout_height="100dp"
+        android:layout_width="370dp"
+        android:layout_height="95dp"
         app:cardBackgroundColor="#708090"
         app:cardCornerRadius="20dp"
         app:cardElevation="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dateTextView"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.164">
 
         <TextView
             android:id="@+id/quoteTextView"
@@ -43,33 +43,34 @@
             android:layout_margin="16dp"
             android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="18sp"
+            android:fontFamily="serif"
             android:textStyle="italic" />
 
     </androidx.cardview.widget.CardView>
 
-    <TextView
-        android:id="@+id/dateTextView"
-        android:layout_width="337dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="40dp"
-        android:paddingLeft="50dp"
-        android:textColor="@color/white"
-        android:textSize="26dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:layout_width="100dp"
+    <ImageView
+        android:id="@+id/greetingimage"
+        android:layout_width="80dp"
         android:layout_height="80dp"
-        android:id="@+id/greeting"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.04"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.437" />
+        app:layout_constraintVertical_bias="0.04" />
+
+    <TextView
+        android:id="@+id/greetingtext"
+        android:layout_width="260dp"
+        android:layout_height="60dp"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.688"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.055" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

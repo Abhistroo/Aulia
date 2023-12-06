@@ -13,13 +13,12 @@ class Aulia : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
     private lateinit var binding: AuliaBinding
-
+    private lateinit var dateTextView: TextView
     private lateinit var quoteTextView: TextView
-    private lateinit var greetingImageView: ImageView // New ImageView for greeting
+    private lateinit var greetingImageView: ImageView
     private lateinit var greetingTextView: TextView
 
     private val preDefinedQuotes = listOf(
-        // Your list of quotes
         "The only way to do great work is to love what you do. - Steve Jobs",
         "In the middle of difficulty lies opportunity. - Albert Einstein",
         "Believe you can and you're halfway there. - Theodore Roosevelt",
@@ -42,6 +41,7 @@ class Aulia : AppCompatActivity() {
         "The biggest adventure you can take is to live the life of your dreams. - Oprah Winfrey",
         "Life is a journey, not a destination.",
         "Life is either a daring adventure or nothing at all. - Helen Keller",
+        // Your list of quotes
         // ... (other quotes)
     )
 
@@ -55,15 +55,17 @@ class Aulia : AppCompatActivity() {
         quoteTextView = findViewById(R.id.quoteTextView)
         greetingImageView = findViewById(R.id.greetingimage)
         greetingTextView = findViewById(R.id.greetingtext)
+        dateTextView = findViewById(R.id.date)
 
-        // Reference the new ImageView
         binding.logout.setOnClickListener {
             auth.signOut()
             startActivity(Intent(this, signin::class.java))
+            finish()
         }
 
         displayRandomQuote()
         displayGreeting()
+        displayDate()
     }
 
     private fun displayRandomQuote() {
@@ -76,33 +78,43 @@ class Aulia : AppCompatActivity() {
     private fun displayGreeting() {
         val calendar = Calendar.getInstance()
         val timeOfDay = calendar.get(Calendar.HOUR_OF_DAY)
-        val greetingImage: Int // Resource ID for custom image
-        val greetingtext : String
+        val greetingImage: Int
+        val greetingText: String
 
         when (timeOfDay) {
-            in 1..6 ->{
+            in 1..6 -> {
                 greetingImage = R.drawable.night_image
-                greetingtext = "Good Morning"
+                greetingText = "Good Morning"
             }
-            in 6..12 -> { // Morning (before noon)
-                greetingImage = R.drawable.morning_image // Replace with your custom image for morning
-                greetingtext = "Good Morning"
+            in 6..12 -> {
+                greetingImage = R.drawable.morning_image
+                greetingText = "Good Morning"
             }
-            in 12..16 -> { // Afternoon
-                greetingImage = R.drawable.afternoon_image // Replace with your custom image for afternoon
-                greetingtext = "Good Afternoon"
+            in 12..16 -> {
+                greetingImage = R.drawable.afternoon_image
+                greetingText = "Good Afternoon"
             }
-            in 17..20 -> { // Evening
-                greetingImage = R.drawable.evening_image // Replace with your custom image for evening
-                greetingtext = "Good Evening"
+            in 17..20 -> {
+                greetingImage = R.drawable.evening_image
+                greetingText = "Good Evening"
             }
-            else -> { // Night
-                greetingImage = R.drawable.night_image // Replace with your custom image for night
-                greetingtext = "Good Night"
+            else -> {
+                greetingImage = R.drawable.night_image
+                greetingText = "Good Night"
             }
         }
 
         greetingImageView.setImageResource(greetingImage)
-        greetingTextView.setText(greetingtext)
+        greetingTextView.text = greetingText
+    }
+
+    private fun displayDate() {
+        val calendar = Calendar.getInstance()
+        val dateOfDay = calendar.get(Calendar.DATE)
+        val month = calendar.getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault())
+
+        val formattedDate = String.format(Locale.getDefault(), "%02d %s", dateOfDay, month)
+
+        dateTextView.text = formattedDate
     }
 }

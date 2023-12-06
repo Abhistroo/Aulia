@@ -5,16 +5,16 @@
     android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#383838"
+    android:background="#152534"
     tools:context=".signin">
 
 
     <ImageView
         android:id="@+id/backgroundImage"
-        android:layout_width="317dp"
-        android:layout_height="490dp"
+        android:layout_width="301dp"
+        android:layout_height="478dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/img_1"
+        android:src="@drawable/img_7"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
@@ -24,28 +24,15 @@
 
     <ImageView
         android:id="@+id/backgroundImage1"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@drawable/img"
+        android:layout_width="315dp"
+        android:layout_height="156dp"
+        android:src="@drawable/aulialogo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.026" />
-
-    <ImageView
-        android:id="@+id/backgroundImage2"
-        android:layout_width="116dp"
-        android:layout_height="41dp"
-        android:scaleType="centerInside"
-        android:src="@drawable/img_2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.108" />
+        app:layout_constraintVertical_bias="0.013" />
 
     <TextView
         android:id="@+id/signinlogo"
@@ -59,17 +46,17 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.296" />
+        app:layout_constraintVertical_bias="0.283" />
 
     <EditText
         android:id="@+id/emailbox"
-        android:inputType="textEmailAddress"
         android:layout_width="280dp"
-        android:layout_height="46dp"
+        android:layout_height="50dp"
         android:background="#FFFFFF"
         android:drawableLeft="@drawable/baseline_mail_outline_24"
         android:drawablePadding="10dp"
         android:hint="Email"
+        android:inputType="textEmailAddress"
         android:paddingStart="15dp"
         android:textAlignment="textStart"
         android:textColorHint="#555555"
@@ -82,13 +69,13 @@
 
     <EditText
         android:id="@+id/passwordbox"
-        android:inputType="textPassword"
         android:layout_width="280dp"
-        android:layout_height="46dp"
+        android:layout_height="50dp"
         android:background="#FFFFFF"
         android:drawableLeft="@drawable/baseline_lock_24"
         android:drawablePadding="10dp"
         android:hint="Password"
+        android:inputType="textPassword"
         android:paddingStart="15dp"
         android:textAlignment="textStart"
         android:textColorHint="#555555"
@@ -108,15 +95,15 @@
         android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.427"
+        app:layout_constraintHorizontal_bias="0.415"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.608" />
+        app:layout_constraintVertical_bias="0.595" />
 
     <Button
         android:id="@+id/signinbutton"
-        android:layout_width="150dp"
-        android:layout_height="49dp"
+        android:layout_width="170dp"
+        android:layout_height="60dp"
         android:background="@drawable/round_button"
         android:text="Sign In"
         android:textAlignment="center"
@@ -127,29 +114,30 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.686" />
+        app:layout_constraintVertical_bias="0.67" />
 
 
     <TextView
         android:id="@+id/new_to_notobot"
-        android:layout_width="146dp"
-        android:layout_height="22dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="New to Notobot ?"
         android:textColor="#ffffff"
-        android:textSize="18dp"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.218"
+        app:layout_constraintHorizontal_bias="0.18"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.939" />
 
     <Button
         android:id="@+id/signupbutton"
-        android:layout_width="111dp"
-        android:layout_height="40dp"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
         android:background="@drawable/round_button_signup"
         android:text="SIGN UP"
+        android:textSize="20dp"
         android:textColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
